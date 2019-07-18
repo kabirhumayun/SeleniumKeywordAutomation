@@ -41,4 +41,8 @@ public class ExcelSheetDriver {
 		{
 			return sheet.getCell(column,row).getContents();
 		}
+		
+		public void closeworkbook() {
+			workbook.close();
+		}
 }
