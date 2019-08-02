@@ -20,7 +20,7 @@ public class CommonFunctionsLib {
 
 	public boolean performActions(String Keyword, String value, String xpathExpression)
 			throws NumberFormatException, InterruptedException {
-//		logger.debug("Keyword: " +  Keyword + " value: " + value + " xpathExpression:  " + xpathExpression);
+		//		logger.debug("Keyword: " +  Keyword + " value: " + value + " xpathExpression:  " + xpathExpression);
 		System.out.println("Keyword: " + Keyword + " value: " + value + " xpathExpression:  " + xpathExpression);
 		if (Keyword.equalsIgnoreCase("Click")) {
 			driver.findElement(By.xpath(xpathExpression)).click();
@@ -33,146 +33,146 @@ public class CommonFunctionsLib {
 		} else if (Keyword.equalsIgnoreCase("dropdown")) {
 			Select dropDown = new Select(driver.findElement(By.xpath(xpathExpression)));
 			dropDown.selectByVisibleText(value);
-			
+
 		} else if (Keyword.equalsIgnoreCase("Radio-Male")) {
-			
+
 			//Identifying Male radio button using its ID as an locator
 
-              WebElement maleRadioBtn = driver.findElement(By.id(xpathExpression));
+			WebElement maleRadioBtn = driver.findElement(By.id(xpathExpression));
 
-              //Checking if the Male Radio button is displayed on the Webpage and printing the status
+			//Checking if the Male Radio button is displayed on the Webpage and printing the status
 
-              boolean radioBtnIsDisplayed = maleRadioBtn.isDisplayed();
+			boolean radioBtnIsDisplayed = maleRadioBtn.isDisplayed();
 
-              System.out.println("Is Male radio button displayed: "+radioBtnIsDisplayed);
+			System.out.println("Is Male radio button displayed: "+radioBtnIsDisplayed);
 
-              //Checking if the Male Radio button is enabled on the webpage and printing the status
+			//Checking if the Male Radio button is enabled on the webpage and printing the status
 
-              boolean radioBtnIsEnabled = maleRadioBtn.isEnabled();
+			boolean radioBtnIsEnabled = maleRadioBtn.isEnabled();
 
-              System.out.println("Is Male radio button enabled: "+radioBtnIsEnabled);
+			System.out.println("Is Male radio button enabled: "+radioBtnIsEnabled);
 
-              //Checking the default radio button selection status
+			//Checking the default radio button selection status
 
-              boolean radioBtnIsSelected = maleRadioBtn.isSelected();
+			boolean radioBtnIsSelected = maleRadioBtn.isSelected();
 
-              System.out.println("Default Radio button selection Status: "+radioBtnIsSelected);
+			System.out.println("Default Radio button selection Status: "+radioBtnIsSelected);
 
-              //Selecting male radio button
+			//Selecting male radio button
 
-              maleRadioBtn.click();
+			maleRadioBtn.click();
 
-              //rechecking the male radio button selection status and printing it..
+			//rechecking the male radio button selection status and printing it..
 
-              boolean radioBtnNewSelectionStatus = maleRadioBtn.isSelected();
+			boolean radioBtnNewSelectionStatus = maleRadioBtn.isSelected();
 
-              System.out.println("Male radio Selection status after perform click() event: "+radioBtnNewSelectionStatus);
-//				driver.findElement(By.xpath(xpathExpression)).sendKeys(value);
-//				logger.info("Input is performed sucessfully");
+			System.out.println("Male radio Selection status after perform click() event: "+radioBtnNewSelectionStatus);
+			//				driver.findElement(By.xpath(xpathExpression)).sendKeys(value);
+			//				logger.info("Input is performed sucessfully");
 			return true;
 		} else if (Keyword.equalsIgnoreCase("Radio-Female")) {
 
-//			
+			//			
 
 			//Identifying Male radio button using its ID as an locator
 
-              WebElement maleRadioBtn = driver.findElement(By.id(xpathExpression));
+			WebElement maleRadioBtn = driver.findElement(By.id(xpathExpression));
 
-             
 
-              //Checking if the Male Radio button is displayed on the Webpage and printing the status
 
-              boolean radioBtnIsDisplayed = maleRadioBtn.isDisplayed();
+			//Checking if the Male Radio button is displayed on the Webpage and printing the status
 
-              System.out.println("Is Male radio button displayed: "+radioBtnIsDisplayed);
+			boolean radioBtnIsDisplayed = maleRadioBtn.isDisplayed();
 
-             
+			System.out.println("Is Male radio button displayed: "+radioBtnIsDisplayed);
 
-              //Checking if the Male Radio button is enabled on the webpage and printing the status
 
-              boolean radioBtnIsEnabled = maleRadioBtn.isEnabled();
 
-              System.out.println("Is Male radio button enabled: "+radioBtnIsEnabled);
+			//Checking if the Male Radio button is enabled on the webpage and printing the status
 
-             
+			boolean radioBtnIsEnabled = maleRadioBtn.isEnabled();
 
-              //Checking the default radio button selection status
+			System.out.println("Is Male radio button enabled: "+radioBtnIsEnabled);
 
-              boolean radioBtnIsSelected = maleRadioBtn.isSelected();
 
-              System.out.println("Default Radio button selection Status: "+radioBtnIsSelected);
 
-             
+			//Checking the default radio button selection status
 
-              //Selecting male radio button
+			boolean radioBtnIsSelected = maleRadioBtn.isSelected();
 
-              maleRadioBtn.click();
+			System.out.println("Default Radio button selection Status: "+radioBtnIsSelected);
 
-             
 
-              //rechecking the male radio button selection status and printing it..
 
-              boolean radioBtnNewSelectionStatus = maleRadioBtn.isSelected();
+			//Selecting male radio button
 
-              System.out.println("Male radio Selection status after perform click() event: "+radioBtnNewSelectionStatus);
-//				driver.findElement(By.xpath(xpathExpression)).sendKeys(value);
-//				logger.info("Input is performed sucessfully");
+			maleRadioBtn.click();
+
+
+
+			//rechecking the male radio button selection status and printing it..
+
+			boolean radioBtnNewSelectionStatus = maleRadioBtn.isSelected();
+
+			System.out.println("Male radio Selection status after perform click() event: "+radioBtnNewSelectionStatus);
+			//				driver.findElement(By.xpath(xpathExpression)).sendKeys(value);
+			//				logger.info("Input is performed sucessfully");
 			return true;
-			
+
 		} else if (Keyword.equalsIgnoreCase("Radio-exp")) {
 
-//			
+			//			
 
 			//Identifying Male radio button using its ID as an locator
 
-              WebElement expRadioBtn = driver.findElement(By.id(xpathExpression));
+			WebElement expRadioBtn = driver.findElement(By.id(xpathExpression));
 
-             
 
-              //Checking if the Male Radio button is displayed on the Webpage and printing the status
 
-              boolean radioBtnIsDisplayed = expRadioBtn.isDisplayed();
+			//Checking if the Male Radio button is displayed on the Webpage and printing the status
 
-              System.out.println("Is Male radio button displayed: "+radioBtnIsDisplayed);
+			boolean radioBtnIsDisplayed = expRadioBtn.isDisplayed();
 
-             
+			System.out.println("Is Male radio button displayed: "+radioBtnIsDisplayed);
 
-              //Checking if the Male Radio button is enabled on the webpage and printing the status
 
-              boolean radioBtnIsEnabled = expRadioBtn.isEnabled();
 
-              System.out.println("Is Male radio button enabled: "+radioBtnIsEnabled);
+			//Checking if the Male Radio button is enabled on the webpage and printing the status
 
-             
+			boolean radioBtnIsEnabled = expRadioBtn.isEnabled();
 
-              //Checking the default radio button selection status
+			System.out.println("Is Male radio button enabled: "+radioBtnIsEnabled);
 
-              boolean radioBtnIsSelected = expRadioBtn.isSelected();
 
-              System.out.println("Default Radio button selection Status: "+radioBtnIsSelected);
 
-             
+			//Checking the default radio button selection status
 
-              //Selecting male radio button
+			boolean radioBtnIsSelected = expRadioBtn.isSelected();
 
-              expRadioBtn.click();
+			System.out.println("Default Radio button selection Status: "+radioBtnIsSelected);
 
-             
 
-              //rechecking the male radio button selection status and printing it..
 
-              boolean radioBtnNewSelectionStatus = expRadioBtn.isSelected();
+			//Selecting male radio button
 
-              System.out.println("Experience  radio Selection status after perform click() event: "+radioBtnNewSelectionStatus);
-//				driver.findElement(By.xpath(xpathExpression)).sendKeys(value);
-//				logger.info("Input is performed sucessfully");
+			expRadioBtn.click();
+
+
+
+			//rechecking the male radio button selection status and printing it..
+
+			boolean radioBtnNewSelectionStatus = expRadioBtn.isSelected();
+
+			System.out.println("Experience  radio Selection status after perform click() event: "+radioBtnNewSelectionStatus);
+			//				driver.findElement(By.xpath(xpathExpression)).sendKeys(value);
+			//				logger.info("Input is performed sucessfully");
 			return true;
 
-//			add elements here for add terms and condition button
-//		} else if (Keyword.equalsIgnoreCase("Input")) {
-//			driver.findElement(By.xpath(xpathExpression)).sendKeys(value);
-//			logger.info("Input is performed sucessfully");
-//			return true;
+			//			add elements here for add terms and condition button
+			//		} else if (Keyword.equalsIgnoreCase("Input")) {
+			//			driver.findElement(By.xpath(xpathExpression)).sendKeys(value);
+			//			logger.info("Input is performed sucessfully");
+			//			return true;
 		} else if (Keyword.equalsIgnoreCase("gettext")) {
 			driver.findElement(By.xpath(xpathExpression)).getText();
 			logger.info("getText is performed sucessfully");

@@ -21,34 +21,35 @@ import org.testng.annotations.Test;
 
 public class LoadTest01 {
 
-    private WebDriver driver;
+	private WebDriver driver;
 
-    @BeforeClass
-    public void beforeClass() {
-    	//copy from Test Automation src>driver.java> paste here chrome driver executable file
-		System.setProperty("webdriver.chrome.driver","./webdriver/chromedriver.exe");
+	@BeforeClass
+	public void beforeClass() {
+		// copy from Test Automation src>driver.java> paste here chrome driver
+		// executable file
+		System.setProperty("webdriver.chrome.driver", "./webdriver/chromedriver.exe");
 		// driver=new FirefoxDriver();
 //		driver = new ChromeDriver();
-        driver = new ChromeDriver();
-    }
+		driver = new ChromeDriver();
+	}
 
-    @AfterClass
-    public void afterClass() {
-        driver.quit();
-    }
+	@AfterClass
+	public void afterClass() {
+		driver.quit();
+	}
 
-    @Test
-    public void verifySearchButton() {
+	@Test
+	public void verifySearchButton() {
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        driver.get("http://www.google.com");
+		driver.get("http://www.google.com");
 
-        String search_text = "Google Search";
-        WebElement search_button = driver.findElement(By.name("btnK"));
+		String search_text = "Google Search";
+		WebElement search_button = driver.findElement(By.name("btnK"));
 
-        String text = search_button.getAttribute("value");
+		String text = search_button.getAttribute("value");
 
-        Assert.assertEquals(text, search_text, "Text not found!");
-    }
+		Assert.assertEquals(text, search_text, "Text not found!");
+	}
 }
