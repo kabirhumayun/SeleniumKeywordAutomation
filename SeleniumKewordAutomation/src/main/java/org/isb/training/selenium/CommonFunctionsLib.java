@@ -178,11 +178,11 @@ public class CommonFunctionsLib {
 			logger.info("getText is performed sucessfully");
 			return true;
 		} else if (Keyword.equalsIgnoreCase("url")) {
-			driver.get(value);
+			driver.get(value);  // 
 			logger.info("Url is opened sucessfully");
 			return true;
 		} else if (Keyword.equalsIgnoreCase("CloseBrowser")) {
-			driver.close();
+			driver.quit();
 			logger.info("Browser is closed sucessfully");
 			return true;
 		} else if (Keyword.equalsIgnoreCase("sleep")) {

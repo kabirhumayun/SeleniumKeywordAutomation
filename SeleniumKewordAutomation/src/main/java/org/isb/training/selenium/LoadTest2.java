@@ -48,15 +48,18 @@ public class LoadTest2 {
 	@Test
 	public void verifySearchButton() throws BiffException, IOException, NumberFormatException, InterruptedException {
 
-		Driver d = new Driver();
+		// creating class object Driver  
+		Driver d = new Driver();  
+		// creating class object for configFileReader 
 		ConfigFileReader configFileReader = new ConfigFileReader();
 		ExcelSheetDriver excelSheetDriver = new ExcelSheetDriver();
 		ExcelSheetDriver excelSheetDriver1 = new ExcelSheetDriver();
 		ExcelSheetDriver excelSheetDriver2 = new ExcelSheetDriver();
 		
+		// variable name testSuitesheet data type is Sheet
 		Sheet testSuitesheet = excelSheetDriver.getWorksheet(configFileReader.getTestSuite(), configFileReader.getTestSuiteSheet());
-		int c = excelSheetDriver.columnCount();
-		int r = excelSheetDriver.rowCount();
+		int c = excelSheetDriver.columnCount();  // 7
+		int r = excelSheetDriver.rowCount();  // 44
 		System.out.println(c + " " + r);
 
 		for (int i = 1; i < r; i++) {

@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
+// creates an object which is read the configuration properties files under Config folder
 public class ConfigFileReader {
 	
 	private Properties properties;
@@ -30,7 +31,7 @@ public class ConfigFileReader {
 	}
 	
 	public String getDriverPath(){
-		String driverPath = properties.getProperty("driverPath");
+		String driverPath = properties.getProperty("driverPath");// name has to be the same as in configuration properties files
 		if(driverPath!= null) return driverPath;
 		else throw new RuntimeException("driverPath not specified in the configuration.properties file.");		
 	}
