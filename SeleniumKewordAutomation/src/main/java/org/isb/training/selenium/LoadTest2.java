@@ -78,8 +78,8 @@ public class LoadTest2 {
 			if(ExecutionFlag.equalsIgnoreCase("Y")){
 				Sheet TestCasesheet =  excelSheetDriver1.getWorksheet(configFileReader.getTestCasePath(), Description);
 				System.out.println("TestCasesheet " + TestCasesheet.toString());
-				int rTestcase = excelSheetDriver1.rowCount();
-				int cTestCase = excelSheetDriver1.columnCount();
+				int rTestcase = excelSheetDriver1.rowCount();  // 5 rows
+				int cTestCase = excelSheetDriver1.columnCount();  // 4 columns
 
 				for(int k = 1; k < rTestcase; k++)
 				{
@@ -96,8 +96,8 @@ public class LoadTest2 {
 					if(testcaseExecutionFlag.equalsIgnoreCase("y")){
 
 						Sheet testStepsheet = excelSheetDriver2.getWorksheet(configFileReader.getTestStepsPath(), Description);
-						int rowTestSteps = excelSheetDriver2.rowCount();
-						int columnTestSteps = excelSheetDriver2.columnCount();
+						int rowTestSteps = excelSheetDriver2.rowCount();   // row count =44
+						int columnTestSteps = excelSheetDriver2.columnCount();  // column counts=6
 						WebDriver driver = d.InitateDriver();
 						CommonFunctionsLib comlib = new CommonFunctionsLib(driver);
 						for(int w = 1; w < rowTestSteps; w++)
