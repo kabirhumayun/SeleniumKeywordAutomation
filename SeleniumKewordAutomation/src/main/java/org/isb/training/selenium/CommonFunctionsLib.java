@@ -125,8 +125,8 @@ public class CommonFunctionsLib {
 
 			//Identifying Male radio button using its ID as an locator
 
-			WebElement expRadioBtn = driver.findElement(By.id(xpathExpression));
-
+//			WebElement expRadioBtn = driver.findElement(By.id(xpathExpression));
+			WebElement expRadioBtn = driver.findElement(By.xpath(xpathExpression));
 
 
 			//Checking if the Male Radio button is displayed on the Webpage and printing the status
